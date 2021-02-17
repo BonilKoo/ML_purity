@@ -15,7 +15,7 @@ import pandas as pd
 import joblib
 from keras.models import load_model # when using MLP model
 
-# Load your gene expression (log2 transformed FPKM) data as numpy array (sample x gene).
+# Load your gene expression (log2-transformed FPKM) data as numpy array (sample x gene).
 example_data = pd.read_csv('example_data.tsv', sep='\t', index_col='Sample ID')
 X = example_data.values
 
