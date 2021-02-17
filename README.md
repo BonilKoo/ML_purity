@@ -11,6 +11,7 @@ The example ipython notebook (ipynb) file is in the example directory. Please re
 
 scikit-learn (<= 0.23.2) must be installed to scale input data.
 ```
+import pandas as pd
 import joblib
 from keras.models import load_model # when using MLP model
 
