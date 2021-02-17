@@ -31,5 +31,5 @@ MLP = load_model('../models/MLP/MLP.h5') # When using the MLP models, use functi
 # Predict tumor purity
 Ridge_purity = Ridge.predict(X_scaled)
 RFR_purity = RFR.predict(X) # When using the RFR models, use not scaled data.
-MLP_purity = MLP.predict(X_scaled).reshape(-1) # When using the MLP models, reshaping the array is required for easy use.
+MLP_purity = MLP.predict(X_scaled).reshape(-1) # When using the MLP models, reshaping the array is recommended for easy use.
 ```
