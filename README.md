@@ -23,10 +23,12 @@ X = example_data.values
 Scaler = joblib.load('../models/Scaler/Scaler.joblib')
 X_scaled = Scaler.transform(X)
 
+# Load model to use
 Ridge = joblib.load('../models/Ridge/Ridge.joblib')
 RFR = joblib.load('../models/RFR/RFR.joblib')
 MLP = load_model('../models/MLP/MLP.h5') # When using the MLP models, use function 'load_model' for loading the model.
 
+# Predict tumor purity
 Ridge_purity = Ridge.predict(X_scaled)
 RFR_purity = RFR.predict(X) # When using the RFR models, use not scaled data.
 MLP_purity = MLP.predict(X_scaled).reshape(-1) # When using the MLP models, reshaping the array is required for easy use.
