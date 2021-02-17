@@ -1,6 +1,11 @@
 # Tumor purity prediction from RNA sequencing-based gene expression data
 The machine learning models to estimate tumor purity trained on TCGA RNA sequencing-based gene expression data. Bulk tumor samples used for high-throughput molecular profiling are often an admixture of cancer cells and non-cancerous cells. The proportion of tumor cells in the admixture is refer to as tumor purity. The mixed composition can confound the analysis and affect the biological interpretation of the results, and thus, accurate prediction of tumor purity is critical.
 
+## Download
+The machine learning models with file sizes of 25 MB or less were uploaded to this repository.
+
+Other models are available in https://figshare.com/account/projects/98639/articles/14045330.
+
 ## Data preparation
 To use the models, log-transformed values of quantified FPKM (log2(FPKM+1)) are required. The FPKM values shoud be calculated through the mRNA analysis pipeline of the GDC (https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/Expression_mRNA_Pipeline/).
 
