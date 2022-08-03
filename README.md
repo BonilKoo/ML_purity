@@ -4,7 +4,7 @@ The machine learning models to estimate tumor purity trained on TCGA RNA sequenc
 ## Download
 The machine learning models with file sizes of 25 MB or less were uploaded to this repository.
 
-Other models are available in https://figshare.com/account/projects/98639/articles/14045330.
+Other models are available in https://doi.org/10.6084/m9.figshare.14045330.v1.
 
 ## Data preparation
 To use the models, log-transformed values of quantified FPKM (log2(FPKM+1)) are required. The FPKM values shoud be calculated through the mRNA analysis pipeline of the GDC (https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/Expression_mRNA_Pipeline/).
