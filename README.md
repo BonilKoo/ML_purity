@@ -39,6 +39,9 @@ RFR_purity = RFR.predict(X) # When using the RFR models, use not scaled data.
 MLP_purity = MLP.predict(X_scaled).reshape(-1) # When using the MLP models, reshaping the array is recommended for easy use.
 ```
 
-# Reference
+# Citation
 Koo, Bonil, and Je-Keun Rhee. "Prediction of tumor purity from gene expression data using machine learning." *Briefings in Bioinformatics* 22.6 (2021): bbab163.
 (https://doi.org/10.1093/bib/bbab163)
+```
+
+```
