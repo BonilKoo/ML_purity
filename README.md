@@ -7,14 +7,14 @@ The machine learning models with file sizes of 25 MB or less were uploaded to th
 Other models are available in https://doi.org/10.6084/m9.figshare.14045330.v1.
 
 ## Data preparation
-To use the models, log-transformed values of quantified FPKM (log2(FPKM+1)) are required. The FPKM values shoud be calculated through the mRNA analysis pipeline of the GDC (https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/Expression_mRNA_Pipeline/).
+To use the models, log-transformed values of quantified FPKM (log2(FPKM+1)) are required. The FPKM values shoud be calculated through the mRNA analysis pipeline of the GDC (https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/Expression_mRNA_Pipeline/). For mRNA quantification, [gencode.v22.annotation.gtf](https://www.gencodegenes.org/human/release_22.html) is required, not v36.
 
 In addition, the order of genes should be arranged in the same order as the example data. (The gene lists are uploaded in GeneList directory.)
 
 ## Usage
 The example ipython notebook (ipynb) file is in the example directory. Please refer it.
 
-scikit-learn (<= 0.23.2) must be installed to scale input data.
+scikit-learn (<= 0.23.2) is recommended to scale input data.
 ```
 import pandas as pd
 import joblib
@@ -26,6 +26,7 @@ X = example_data.values
 
 # Data scaling is needed except for RFR model
 Scaler = joblib.load('../models/Scaler/Scaler.joblib')
+Scaler.clip = False # If you use scikit-learn > 0.23.2
 X_scaled = Scaler.transform(X)
 
 # Load model to use
